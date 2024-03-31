@@ -1,0 +1,78 @@
+{
+  "name": "prayer-time",
+  "displayName": "Prayer Time",
+  "description": "Stay connected to your faith while coding with the 'Prayer Time' extension for Visual Studio Code.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "assets/icon.png",
+  "activationEvents": [
+    "*"
+  ],
+  "keywords": [
+    "ibadah",
+    "sholat",
+    "muslim",
+    "moslem",
+    "islam",
+    "prayer",
+    "jadwal"
+  ],
+  "publisher": "arsyaadi",
+  "author": {
+    "name": "Arsya Adi Swtiawan",
+    "url": "https://github.com/arsyaadi"
+  },
+  "maintainers": [
+    {
+      "name": "Arsya Adi Setiawan",
+      "email": "arsyaadi@gmail.com",
+      "url": "https://github.com/arsyaadi"
+    }
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "prayer-time.setPrayerLocation",
+        "title": "Prayer Time: Select Prayer Time Location"
+      },
+      {
+        "command": "prayer-time.refreshPrayerTime",
+        "title": "Prayer Time: Refresh"
+      },
+      {
+        "command": "prayer-time.showPrayerTime",
+        "title": "Prayer Time: Show Prayer Time"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "dayjs": "^1.11.10",
+    "node-schedule": "^2.1.1"
+  }
+}
