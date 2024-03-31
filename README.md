@@ -2,6 +2,8 @@
 
 This Visual Studio Code extension provides prayer time information for locations in Indonesia. It helps users to stay informed about the prayer timings according to their selected location.
 
+![Prayer Time Extension](assets/prayer-time.gif)
+
 ## Features
 
 - Displays next prayer time in the status bar.
