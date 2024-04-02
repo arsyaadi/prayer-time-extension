@@ -46,10 +46,6 @@
         "title": "Prayer Time: Select Prayer Time Location"
       },
       {
-        "command": "prayer-time.refreshPrayerTime",
-        "title": "Prayer Time: Refresh"
-      },
-      {
         "command": "prayer-time.showPrayerTime",
         "title": "Prayer Time: Show Prayer Time"
       }

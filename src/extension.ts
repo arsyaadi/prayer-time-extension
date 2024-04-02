@@ -127,13 +127,6 @@ export async function activate(context: vscode.ExtensionContext) {
   );
 
 
-  const refreshPrayerTimeCommand = vscode.commands.registerCommand(
-    PrayerCommand.REFRESH_PRAYER_TIME,
-    async () => {
-      await onFetch(context);
-    }
-  );
-
   const showPrayerTimeCommand = vscode.commands.registerCommand(
     PrayerCommand.SHOW_PRAYER_TIME,
     async () => {
@@ -141,8 +134,7 @@ export async function activate(context: vscode.ExtensionContext) {
     }
   )
 
-  context.subscriptions.push(setPrayerLocationCommand, refreshPrayerTimeCommand);
-  context.subscriptions.push(showPrayerTimeCommand);
+  context.subscriptions.push(setPrayerLocationCommand, showPrayerTimeCommand);
 
   await onFetch(context);
 
