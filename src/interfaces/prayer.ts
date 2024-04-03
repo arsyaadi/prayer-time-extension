@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+
 export interface ISchedule {
   tanggal: string;
   imsak: string;
@@ -15,4 +17,9 @@ export interface IPrayerSchedule {
   id: number;
   jadwal: ISchedule;
   lokasi: string;
+}
+
+export interface IPrayerTime {
+  name: string;
+  time: dayjs.Dayjs;
 }
