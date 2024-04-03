@@ -2,7 +2,7 @@
   "name": "prayer-time",
   "displayName": "Prayer Time",
   "description": "Stay connected to your faith while coding with the 'Prayer Time' extension for Visual Studio Code.",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.87.0"
   },

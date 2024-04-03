@@ -16,6 +16,8 @@ This Visual Studio Code extension provides prayer time information for locations
   > Allows users to set their location for accurate prayer timings.
 - Prayer Time: Show Prayer Time
   > Displays the current prayer time or prayer schedule.
+- Prayer Time: Set Reminder Time
+  > Set reminder to next prayer time.
 
 ## Requirements
 
