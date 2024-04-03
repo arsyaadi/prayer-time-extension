@@ -48,6 +48,10 @@
       {
         "command": "prayer-time.showPrayerTime",
         "title": "Prayer Time: Show Prayer Time"
+      },
+      {
+        "command": "prayer-time.setReminderTime",
+        "title": "Prayer Time: Set Reminder Time"
       }
     ]
   },

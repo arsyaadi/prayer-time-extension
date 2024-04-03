@@ -15,6 +15,7 @@ export class PrayerService {
             const { data }  = await this._http.get<IHttpResponse<ILocation[]>>("https://api.myquran.com/v2/sholat/kota/semua");
             return data;
         } catch (error) {
+            console.error("Failed to fetch prayer location", error);
             throw new Error("Failed to fetch prayer location");
         }
     }
