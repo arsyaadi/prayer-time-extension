@@ -22,7 +22,7 @@ export const displayPrayerTime = (scheduleData: IPrayerSchedule) => {
    │ Area: ${scheduleData.daerah.padEnd(32)}│
    │ Date: ${jadwal.tanggal.padEnd(32)}│
    │ Imsak: ${jadwal.imsak.padEnd(27)}    │
-   │ Subuh: ${jadwal.subuh.padEnd(28)}    │
+   │ Subuh: ${jadwal.subuh.padEnd(27)}    │
    │ Sunrise: ${jadwal.terbit.padEnd(27)}  │
    │ Duha: ${jadwal.dhuha.padEnd(28)}    │
    │ Dhuhr: ${jadwal.dzuhur.padEnd(29)}  │
