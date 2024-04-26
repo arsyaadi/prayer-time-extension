@@ -16,7 +16,7 @@ const _http = http();
 const services = new PrayerService(_http);
 
 const init = async (context: vscode.ExtensionContext) => {
-  const persistPrayerLocation = context.workspaceState.get("prayerLocation");
+  const persistPrayerLocation = context.globalState.get("prayerLocation");
 
   if (!persistPrayerLocation) {
     try {
@@ -37,7 +37,7 @@ const init = async (context: vscode.ExtensionContext) => {
       );
 
       if (prayerLocation) {
-        context.workspaceState.update("prayerLocation", prayerLocation);
+        context.globalState.update("prayerLocation", prayerLocation);
       }
     } catch (error) {
       console.error("Error fetching prayer location", error);
@@ -64,7 +64,7 @@ const setPrayerLocation = async (context: vscode.ExtensionContext) => {
     );
 
     if (prayerLocation) {
-      context.workspaceState.update("prayerLocation", prayerLocation);
+      context.globalState.update("prayerLocation", prayerLocation);
     }
 
     // Fetch prayer time
@@ -75,8 +75,9 @@ const setPrayerLocation = async (context: vscode.ExtensionContext) => {
 };
 
 const onFetch = async (context: vscode.ExtensionContext) => {
-  const persistPrayerLocation = context.workspaceState.get("prayerLocation");
-  const isSetReminder = context.workspaceState.get("showReminder");
+  const persistPrayerLocation = context.globalState.get("prayerLocation");
+  const isSetReminder = context.globalState.get("showReminder");
+
 
   if (!persistPrayerLocation) {
     vscode.window.showErrorMessage("Please select a prayer location first");
@@ -100,8 +101,6 @@ const onFetch = async (context: vscode.ExtensionContext) => {
       ).format("HH:mm")}]`;
     }
 
-    console.log(isSetReminder, "isSetReminder");
-
     // Show remaining time to next prayer
     if (isSetReminder) {
       remainingTimePrayer(currentPrayer.nextPrayer);
@@ -123,7 +122,7 @@ const onFetch = async (context: vscode.ExtensionContext) => {
 };
 
 const showPrayerTime = async (context: vscode.ExtensionContext) => {
-  const persistPrayerLocation = context.workspaceState.get("prayerLocation");
+  const persistPrayerLocation = context.globalState.get("prayerLocation");
 
   if (!persistPrayerLocation) {
     vscode.window.showErrorMessage("Please select a prayer location first");
@@ -150,9 +149,9 @@ const setReminderTime = async (context: vscode.ExtensionContext) => {
   );
 
   if (choice === "Yes") {
-    context.workspaceState.update("showReminder", true);
+    context.globalState.update("showReminder", true);
   } else if (choice === "No") {
-    context.workspaceState.update("showReminder", false);
+    context.globalState.update("showReminder", false);
   } else {
     return;
   }

@@ -1,10 +1,14 @@
+## [0.2.2]
+
+- Store location ID in global state instead of workspace state
+
 ## [0.1.2]
 
 - Fix ui show prayer time
 
 ## [0.1.1]
 
-- Add reminder next prayer time
+- Add reminder for next prayer time
 
 ## [0.0.1]
 
