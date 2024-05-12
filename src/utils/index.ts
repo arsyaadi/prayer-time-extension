@@ -87,7 +87,7 @@ export const remainingTimePrayer = (prayerTime: IPrayerTime) => {
   // check if next prayerTime approximately 5 minutes
   if (remainingTime <= 5 && remainingTime > 0) {
     vscode.window.showInformationMessage(`Remaining time to ${prayerTime.name} :  ${remainingTime} minutes`);
-  } else if (remainingTime == 0) {
-    vscode.window.showInformationMessage(`It's time for ${prayerTime.name}`);
+  } else if (remainingTime === 0) {
+    vscode.window.showInformationMessage(`It's time for ${prayerTime.name} at ${currentTime.format("hh:mm A")}`, { modal: true });
   }
 }
