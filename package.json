@@ -91,7 +91,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "axios": "^1.6.8",
+    "axios": "^1.8.2",
     "dayjs": "^1.11.10",
     "node-schedule": "^2.1.1"
   }
