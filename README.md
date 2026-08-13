@@ -1,3 +1,5 @@
+
+
 # Prayer Time Extension
 
 This Visual Studio Code extension provides prayer time information for locations in Indonesia. It helps users to stay informed about the prayer timings according to their selected location.
@@ -21,7 +23,8 @@ This Visual Studio Code extension provides prayer time information for locations
 
 ## Requirements
 
-This extension requires an active internet connection to fetch accurate prayer time data. No additional dependencies are needed.
+- **Visual Studio Code:** Version 1.87.0 or higher.
+- This extension requires an active internet connection to fetch accurate prayer time data. No additional dependencies are needed.
 
 ## Known Issues
 
